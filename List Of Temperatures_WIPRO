@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int days=sc.nextInt();
+        int arr[]=new int[days];
+        int min=sc.nextInt();
+        int max=sc.nextInt();
+        
+        for(int i=0;i<arr.length;i++)
+            arr[i]=sc.nextInt();
+            
+        for(int i=0;i<arr.length;i++)
+            if(arr[i]<min || arr[i]>max)
+                System.out.print(arr[i]+" ");
+    }
+}
