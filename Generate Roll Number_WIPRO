@@ -1,0 +1,22 @@
+mport java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        String str=Integer.toString(n);
+        String roll="";
+        for (int i=0;i<str.length();i++) {
+            char digit=str.charAt(i);
+            char nextDigit=str.charAt((i+ k-1) % str.length());
+            roll+= nextDigit;
+        }
+        System.out.print(roll);
+
+        
+    }
+}
